@@ -1,0 +1,14 @@
+
+models:
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_delivery
+    columns:
+      - name: delivery_time_min
+        tests:
+          - not_null

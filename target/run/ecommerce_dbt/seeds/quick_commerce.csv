@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "dev"."main"."quick_commerce" (Order_ID integer,Company text,City text,Customer_Age integer,Order_Value integer,Delivery_Time_Min integer,Distance_Km float8,Items_Count integer,Product_Category text,Payment_Method text,Customer_Rating integer,Discount_Applied integer,Delivery_Partner_Rating integer)
+  ;
+    -- dbt seed --
+    
+          COPY "dev"."main"."quick_commerce" FROM '/Users/annaborisenko/Documents/new_job_project_26/dbt_pipeline/dbt-ecommerce-project/seeds/quick_commerce.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  
