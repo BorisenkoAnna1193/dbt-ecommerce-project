@@ -1,6 +1,13 @@
 
+
+  create or replace view `default`.`int_orders_enriched` 
   
-  create view "dev"."main"."int_orders_enriched__dbt_tmp" as (
+    
+  
+  
+    
+    
+  as (
     -- int_orders_enriched.sql
 select
     o.order_id,
@@ -12,7 +19,13 @@ select
     d.delivery_time_min,
     d.distance_km,
     d.delivery_rating
-from "dev"."main"."stg_orders" o
-left join "dev"."main"."stg_delivery" d
+from `default`.`stg_orders` o
+left join `default`.`stg_delivery` d
     on o.order_id = d.order_id
-  );
+    
+  )
+      
+      
+                    -- end_of_sql
+                    
+                    

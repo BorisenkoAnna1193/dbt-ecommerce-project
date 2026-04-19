@@ -2,18 +2,10 @@ ecommerce_profile:
   target: dev
   outputs:
     dev:
-      type: duckdb
-      path: ecommerce.duckdb
-ecommerce_profile:
-  outputs:
-    dev:
-      type: duckdb
-      path: dev.duckdb
-      threads: 1
-
-    prod:
-      type: duckdb
-      path: prod.duckdb
-      threads: 4
-
-  target: dev
+      type: clickhouse
+      schema: default
+      host: localhost
+      port: 8123
+      user: default
+      password: "admin"
+      secure: false

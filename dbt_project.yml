@@ -11,12 +11,10 @@ test-paths: ["tests"]
 models:
   ecommerce_dbt:
     staging:
-      +materialized: view
-    intermediate:
-      +materialized: view
+      +materialized: table
     marts:
       +materialized: table
-
 seeds:
   ecommerce_dbt:
-    +quote_columns: false
+    +engine: MergeTree()
+    +order_by: Order_ID

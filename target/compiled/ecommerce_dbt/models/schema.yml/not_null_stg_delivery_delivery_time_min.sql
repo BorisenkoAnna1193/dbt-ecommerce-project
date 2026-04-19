@@ -5,7 +5,7 @@
 
 
 select delivery_time_min
-from "dev"."main"."stg_delivery"
+from `default`.`stg_delivery`
 where delivery_time_min is null
 
 

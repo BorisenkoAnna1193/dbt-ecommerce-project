@@ -9,6 +9,6 @@ select
     d.delivery_time_min,
     d.distance_km,
     d.delivery_rating
-from "dev"."main"."stg_orders" o
-left join "dev"."main"."stg_delivery" d
+from `default`.`stg_orders` o
+left join `default`.`stg_delivery` d
     on o.order_id = d.order_id

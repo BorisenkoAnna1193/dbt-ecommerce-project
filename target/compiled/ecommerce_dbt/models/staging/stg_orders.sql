@@ -7,4 +7,4 @@ select
     Product_Category as product_category,
     Payment_Method as payment_method,
     Discount_Applied as discount_applied
-from "dev"."main"."quick_commerce"
+from `default`.`quick_commerce`
